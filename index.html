@@ -2,13 +2,18 @@
 <html>
 <head>
     <title>PDF Viewer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <h1>Learning Materials Reference</h1>
     <p>Click the link below to view the PDF:</p>
-    <embed src="./LearningPDFs/NagarjunaSK_QA_Automation_8Y_Resume.pdf" type="application/pdf" width="100%" height="500px">
-    <p><a href="./LearningPDFs/NagarjunaSK_QA_Automation_8Y_Resume.pdf" target="_blank">Open Resume</a></p>
-    <embed src="./LearningPDFs/PawanKumarBookDocumentum.pdf" type="application/pdf" width="100%" height="500px">
-    <p><a href="./LearningPDFs/PawanKumarBookDocumentum.pdf" target="_blank">Open Documentum Reference from PawanKumar</a></p>
+    <a href="javascript:void(0);" onclick="openPopup('./NagarjunaSK_QA_Automation_8Y_Resume.pdf')">Open Resume</a>
+    <a href="javascript:void(0);" onclick="openPopup('./PawanKumarBookDocumentum.pdf')">Open Documentum Reference from PawanKumar</a>
+    <a href="javascript:void(0);" onclick="openPopup('./Java_Note_HW_Durga.pdf')">Open Java Notes</a>
+    <div id="pdfModal" class="modal">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <embed id="pdfEmbed" type="application/pdf" width="100%" height="500px">
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
